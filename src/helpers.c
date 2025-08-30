@@ -16,7 +16,6 @@
   For more information, please refer to <https://unlicense.org/>
 ===================================================================+*/
 
-#include <Windows.h>
 #include <SDL3\SDL.h>
 
 typedef struct OPENCTX

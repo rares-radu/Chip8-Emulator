@@ -21,7 +21,6 @@
 #include <SDL3\SDL.h>
 #include <chip8.h>
 #include <globals.h>
-#include <Windows.h>
 
 static const Uint8 CHIP8_CHARSET[] =
 {
@@ -413,7 +412,7 @@ void ExecInstruction( _In_ PCHIP8 pChip8, Uint16 wInstruction )
                 SDL_memcpy(
                         pChip8->pRegisters->V,
                         &pChip8->pMemory->aMemory[ pChip8->pRegisters->I ],
-                        ( GetXFromWord( wInstruction ) + 1 ) * sizeof( pChip8->pRegisters->V[ 0 ] )
+                        ( GetXFromWord( wInstruction ) + 1 ) * sizeof( pChip8->pMemory->aMemory[ 0 ] )
                         );
                 break;
 
