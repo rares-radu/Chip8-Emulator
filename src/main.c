@@ -64,8 +64,7 @@ int main( int argc, char* argv[] )
                 pRenderer,
                 CHIP8_WIDTH, CHIP8_HEIGHT,
                 SDL_LOGICAL_PRESENTATION_INTEGER_SCALE
-                )
-        )
+                ) )
     {
         SDL_LogError( SDL_LOG_CATEGORY_ERROR, "%s", SDL_GetError() );
         iCode = EXIT_FAILURE;
@@ -212,17 +211,17 @@ Done:
     UninitChip8( &Chip8 );
 
 #ifndef NDEBUG
-    const SDL_AssertData* AssertData = SDL_GetAssertionReport();
-    while ( AssertData )
+    const SDL_AssertData* pAssertData = SDL_GetAssertionReport();
+    while ( pAssertData )
     {
         SDL_LogDebug(
                 SDL_LOG_CATEGORY_ASSERT,
                 "'%s', %s (%s:%d), triggered %u times, always ignore: %s.",
-                AssertData->condition, AssertData->function, AssertData->filename,
-                AssertData->linenum, AssertData->trigger_count,
-                AssertData->always_ignore ? "yes" : "no"
+                pAssertData->condition, pAssertData->function, pAssertData->filename,
+                pAssertData->linenum, pAssertData->trigger_count,
+                pAssertData->always_ignore ? "yes" : "no"
                 );
-        AssertData = AssertData->next;
+        pAssertData = pAssertData->next;
     }
 
     SDL_LogDebug( SDL_LOG_CATEGORY_APPLICATION, "The program terminated with %d unfreed allocations.", SDL_GetNumAllocations() );

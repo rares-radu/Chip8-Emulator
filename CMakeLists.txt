@@ -31,7 +31,7 @@ set( INCLUDES
      ${_sdl3_include_dirs}
      include )
 
-add_executable( ${PROJECT_NAME} ${SOURCES} )
+add_executable( ${PROJECT_NAME} WIN32 ${SOURCES} )
 target_include_directories( ${PROJECT_NAME} PRIVATE ${INCLUDES} )
 target_link_libraries( ${PROJECT_NAME} PRIVATE ${SDL3_LIBRARIES} )
 
