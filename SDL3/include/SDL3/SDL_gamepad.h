@@ -341,7 +341,7 @@ typedef struct SDL_GamepadBinding
 extern SDL_DECLSPEC int SDLCALL SDL_AddGamepadMapping(const char *mapping);
 
 /**
- * LoadProgram a set of gamepad mappings from an SDL_IOStream.
+ * Load a set of gamepad mappings from an SDL_IOStream.
  *
  * You can call this function several times, if needed, to load different
  * database files.
@@ -381,7 +381,7 @@ extern SDL_DECLSPEC int SDLCALL SDL_AddGamepadMapping(const char *mapping);
 extern SDL_DECLSPEC int SDLCALL SDL_AddGamepadMappingsFromIO(SDL_IOStream *src, bool closeio);
 
 /**
- * LoadProgram a set of gamepad mappings from a file.
+ * Load a set of gamepad mappings from a file.
  *
  * You can call this function several times, if needed, to load different
  * database files.

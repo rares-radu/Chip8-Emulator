@@ -486,7 +486,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_LockSurface(SDL_Surface *surface);
 extern SDL_DECLSPEC void SDLCALL SDL_UnlockSurface(SDL_Surface *surface);
 
 /**
- * LoadProgram a BMP image from a seekable SDL data stream.
+ * Load a BMP image from a seekable SDL data stream.
  *
  * The new surface should be freed with SDL_DestroySurface(). Not doing so
  * will result in a memory leak.
@@ -508,7 +508,7 @@ extern SDL_DECLSPEC void SDLCALL SDL_UnlockSurface(SDL_Surface *surface);
 extern SDL_DECLSPEC SDL_Surface * SDLCALL SDL_LoadBMP_IO(SDL_IOStream *src, bool closeio);
 
 /**
- * LoadProgram a BMP image from a file.
+ * Load a BMP image from a file.
  *
  * The new surface should be freed with SDL_DestroySurface(). Not doing so
  * will result in a memory leak.

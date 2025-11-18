@@ -676,7 +676,7 @@ extern SDL_DECLSPEC size_t SDLCALL SDL_IOvprintf(SDL_IOStream *context, SDL_PRIN
 extern SDL_DECLSPEC bool SDLCALL SDL_FlushIO(SDL_IOStream *context);
 
 /**
- * LoadProgram all the data from an SDL data stream.
+ * Load all the data from an SDL data stream.
  *
  * The data is allocated with a zero byte at the end (null terminated) for
  * convenience. This extra byte is not included in the value reported via
@@ -702,7 +702,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_FlushIO(SDL_IOStream *context);
 extern SDL_DECLSPEC void * SDLCALL SDL_LoadFile_IO(SDL_IOStream *src, size_t *datasize, bool closeio);
 
 /**
- * LoadProgram all the data from a file path.
+ * Load all the data from a file path.
  *
  * The data is allocated with a zero byte at the end (null terminated) for
  * convenience. This extra byte is not included in the value reported via

@@ -1983,7 +1983,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_SetAudioPostmixCallback(SDL_AudioDeviceID d
 
 
 /**
- * LoadProgram the audio data of a WAVE file into memory.
+ * Load the audio data of a WAVE file into memory.
  *
  * Loading a WAVE file requires `src`, `spec`, `audio_buf` and `audio_len` to
  * be valid pointers. The entire data portion of the file is then loaded into

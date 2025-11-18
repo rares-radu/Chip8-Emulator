@@ -506,7 +506,7 @@ extern SDL_DECLSPEC bool SDLCALL SDL_WaitAsyncIOResult(SDL_AsyncIOQueue *queue, 
 extern SDL_DECLSPEC void SDLCALL SDL_SignalAsyncIOQueue(SDL_AsyncIOQueue *queue);
 
 /**
- * LoadProgram all the data from a file path, asynchronously.
+ * Load all the data from a file path, asynchronously.
  *
  * This function returns as quickly as possible; it does not wait for the read
  * to complete. On a successful return, this work will continue in the
