@@ -3,9 +3,7 @@ project( Chip8 C )
 
 set( CMAKE_C_STANDARD 11 )
 
-set( CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/SDL3" )
-
-find_package( SDL3 REQUIRED )
+find_package( SDL3 CONFIG REQUIRED )
 
 set( SOURCES
      include/config.h
@@ -33,7 +31,7 @@ set( INCLUDES
 
 add_executable( ${PROJECT_NAME} WIN32 ${SOURCES} )
 target_include_directories( ${PROJECT_NAME} PRIVATE ${INCLUDES} )
-target_link_libraries( ${PROJECT_NAME} PRIVATE ${SDL3_LIBRARIES} )
+target_link_libraries( ${PROJECT_NAME} PRIVATE SDL3::SDL3 )
 
 # Copy the DLL to the output folder
 add_custom_command( TARGET ${PROJECT_NAME} POST_BUILD

@@ -258,7 +258,7 @@ void ExecInstruction( _In_ PCHIP8 pChip8, Uint16 wInstruction )
             // SHL Vx {, Vy}
             case 0xE:
                 pChip8->pRegisters->V[ 0xF ] = ( pChip8->pRegisters->V[ GetXFromWord( wInstruction ) ] >> 7 ) & 0x1;
-                pChip8->pRegisters->V[GetXFromWord(wInstruction)] <<= 1;
+                pChip8->pRegisters->V[ GetXFromWord( wInstruction ) ] <<= 1;
                 break;
 
             default:
